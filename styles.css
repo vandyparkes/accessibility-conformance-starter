@@ -16,12 +16,6 @@ a {
   color: #8c1d40;
 }
 
-a:focus,
-button:focus,
-input:focus {
-  outline: none;
-}
-
 .site-header {
   display: flex;
   justify-content: space-between;

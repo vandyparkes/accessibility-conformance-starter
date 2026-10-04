@@ -55,3 +55,15 @@ main is width 980px. The hero sentence stops at the viewport edge. The rest of t
 The cards stay in three columns, 292px 292px 292px. The third card is off the right edge.
 
 At a 320px window the header is still 980px, main is still 980px, and the cards are still three columns. Scroll width stays 980px.
+
+## Identify at least five issues and remediate at least three
+
+Submit button has no name. Evidence: `<button type="submit"></button>`. Impact is critical. Priority is high. Fix: button text is Register.
+
+Name and email have no label. Evidence: Name is a span. The email label has no for. Impact is critical. Priority is high. Fix: both are labels with for. Both fields are required. The email label includes the asterisk.
+
+Focus ring is missing. Evidence: focused links, fields, and the submit button compute to outline-style none and box-shadow none. Impact is serious. Priority is high. Fix: the outline none rule is removed.
+
+Heading level goes from h1 to h3. Evidence: the hero has an h1, then an h3. Impact is moderate. Priority is medium. Not changed.
+
+The page does not reflow below 980px. Evidence: at 640px and 320px the header and main stay 980px wide and the cards stay three columns. Impact is serious. Priority is high. Not changed.
