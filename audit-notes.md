@@ -27,3 +27,17 @@ The submit button is in the tab order and has no text.
 Each focused link, input, and the submit button has outline-style none and box-shadow none. Background, border, color, and underline match the unfocused control.
 
 Header links and Start have text-decoration none while focused. The three More links stay underlined, same as unfocused.
+
+## Check landmarks, headings, links, buttons, and image alternatives
+
+Accessibility tree, 3 Oct 2026, local practice page.
+
+Landmarks in the tree: banner, navigation, main. Each has no name. There is no contentinfo. The form is not a landmark. Three article elements are in the tree with no name.
+
+Headings: h1 Community Tech Day, h3 Free workshops for neighbors learning practical web skills, h2 Featured sessions, h3 Safer Passwords, h3 Accessible Forms, h3 Responsive Layouts, h2 Register interest, h2 Workshop schedule.
+
+Links: Sessions goes to #sessions. Register goes to #register. Schedule goes to #schedule. Start goes to #register. Three links are named More and the href on each is #.
+
+The only button is the submit button. Its name is empty.
+
+All three images use workshop.svg. The file is a gold and maroon graphic with three figure shapes. The first image name is poster. The second has alt="" and is not in the tree. The third image name is People attending a workshop.
