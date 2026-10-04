@@ -58,11 +58,11 @@ At a 320px window the header is still 980px, main is still 980px, and the cards 
 
 ## Identify at least five issues and remediate at least three
 
-Submit button has no name. Evidence: `<button type="submit"></button>`. Impact is critical. Priority is high. Fix: button text is Register.
+Submit button has no name. Evidence: `<button type="submit"></button>`. Impact is critical. Priority is high. Fix: button text is Register. Retest: the button name is Register.
 
-Name and email have no label. Evidence: Name is a span. The email label has no for. Impact is critical. Priority is high. Fix: both are labels with for. Both fields are required. The email label includes the asterisk.
+Name and email have no label. Evidence: Name is a span. The email label has no for. Impact is critical. Priority is high. Fix: both are labels with for. Both fields are required. The email label includes the asterisk. Retest: the name field label is Name *, and the email field label is Email *. Both are required.
 
-Focus ring is missing. Evidence: focused links, fields, and the submit button compute to outline-style none and box-shadow none. Impact is serious. Priority is high. Fix: the outline none rule is removed.
+Focus ring is missing. Evidence: focused links, fields, and the submit button compute to outline-style none and box-shadow none. Impact is serious. Priority is high. Fix: the outline none rule is removed. Retest: Tab through the links, the name field, the email field, and Register. Each is focus-visible, with outline-style auto, 1px, rgb(0, 95, 204).
 
 Heading level goes from h1 to h3. Evidence: the hero has an h1, then an h3. Impact is moderate. Priority is medium. Not changed.
 
