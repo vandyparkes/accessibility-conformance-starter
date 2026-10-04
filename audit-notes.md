@@ -1,6 +1,6 @@
 ## Run one automated check and record what it finds
 
-axe-core 4.10.3, 3 Oct 2026, local practice page. Three violations.
+axe-core 4.10.3. Three violations.
 
 Submit button has no name. Rule is button-name. Impact is critical. The control is `<button type="submit"></button>`.
 
@@ -10,7 +10,7 @@ Name and email have no label. Rule is label. Impact is critical. Name sits besid
 
 ## Test keyboard navigation and visible focus manually
 
-Chrome, Tab and Shift+Tab, 3 Oct 2026, local practice page.
+Chrome, Tab and Shift+Tab.
 
 Tab order is Sessions, Register, Schedule, Start, More, More, More, the name field, the email field, then the submit button. The next Tab returns to Sessions. Shift+Tab reverses that order. Nothing traps focus.
 
@@ -22,7 +22,7 @@ The submit button is in the tab order and has no text.
 
 ## Test keyboard navigation and visible focus manually
 
-3 Oct 2026, local practice page. Focus moved through 10 controls in page order: Sessions, Register, Schedule, Start, More, More, More, name, email, submit.
+Focus moved through 10 controls in page order: Sessions, Register, Schedule, Start, More, More, More, name, email, submit.
 
 Each focused link, input, and the submit button has outline-style none and box-shadow none. Background, border, color, and underline match the unfocused control.
 
@@ -30,7 +30,7 @@ Header links and Start have text-decoration none while focused. The three More l
 
 ## Check landmarks, headings, links, buttons, and image alternatives
 
-Accessibility tree, 3 Oct 2026, local practice page.
+Accessibility tree.
 
 Landmarks in the tree: banner, navigation, main. Each has no name. There is no contentinfo. The form is not a landmark. Three article elements are in the tree with no name.
 
@@ -41,3 +41,17 @@ Links: Sessions goes to #sessions. Register goes to #register. Schedule goes to 
 The only button is the submit button. Its name is empty.
 
 All three images use workshop.svg. The file is a gold and maroon graphic with three figure shapes. The first image name is poster. The second has alt="" and is not in the tree. The third image name is People attending a workshop.
+
+## Test zoom/reflow at 200% or a narrow responsive condition
+
+Layout width 640px. That width is 200% zoom on a 1280px window.
+
+Page scroll width is 980px. Viewport client width is 625px. A horizontal scrollbar is present.
+
+The header min-width is 980px and the header is 980px wide. Sessions, Register, and Schedule sit past the right edge until the page is scrolled sideways.
+
+main is width 980px. The hero sentence stops at the viewport edge. The rest of the sentence is to the right.
+
+The cards stay in three columns, 292px 292px 292px. The third card is off the right edge.
+
+At a 320px window the header is still 980px, main is still 980px, and the cards are still three columns. Scroll width stays 980px.
