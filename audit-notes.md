@@ -14,25 +14,19 @@ Chrome, Tab and Shift+Tab.
 
 Tab order is Sessions, Register, Schedule, Start, More, More, More, the name field, the email field, then the submit button. The next Tab returns to Sessions. Shift+Tab reverses that order. Nothing traps focus.
 
-Each focused link, field, and the submit button computes to `outline-style: none` and `box-shadow: none`. Start was focused and showed no ring.
+Each focused link, field, and the submit button computes to `outline-style: none` and `box-shadow: none`. Start was focused and showed no ring. Background, border, color, and underline match the unfocused control.
+
+Header links and Start have text-decoration none while focused. The three More links stay underlined, same as unfocused.
 
 Start is a link. Enter moves to `#register` and focus lands on the body. Space leaves focus on Start.
 
 The submit button is in the tab order and has no text.
 
-## Test keyboard navigation and visible focus manually
-
-Focus moved through 10 controls in page order: Sessions, Register, Schedule, Start, More, More, More, name, email, submit.
-
-Each focused link, input, and the submit button has outline-style none and box-shadow none. Background, border, color, and underline match the unfocused control.
-
-Header links and Start have text-decoration none while focused. The three More links stay underlined, same as unfocused.
-
 ## Check landmarks, headings, links, buttons, and image alternatives
 
 Accessibility tree.
 
-Landmarks in the tree: banner, navigation, main. Each has no name. There is no contentinfo. The form is not a landmark. Three article elements are in the tree with no name.
+Landmarks in the tree: banner, navigation, main. Each has no name. There is no contentinfo. The form is not a landmark. The three cards are sections and have no landmark role.
 
 Headings: h1 Community Tech Day, h3 Free workshops for neighbors learning practical web skills, h2 Featured sessions, h3 Safer Passwords, h3 Accessible Forms, h3 Responsive Layouts, h2 Register interest, h2 Workshop schedule.
 
@@ -64,6 +58,14 @@ Name and email have no label. Evidence: Name is a span. The email label has no f
 
 Focus ring is missing. Evidence: focused links, fields, and the submit button compute to outline-style none and box-shadow none. Impact is serious. Priority is high. Fix: the outline none rule is removed. Retest: Tab through the links, the name field, the email field, and Register. Each is focus-visible, with outline-style auto, 1px, rgb(0, 95, 204).
 
-Heading level goes from h1 to h3. Evidence: the hero has an h1, then an h3. Impact is moderate. Priority is medium. Not changed.
+Heading level goes from h1 to h3. Evidence: the hero has an h1, then an h3. Impact is moderate. Priority is medium. Not changed. Retest: not run.
 
-The page does not reflow below 980px. Evidence: at 640px and 320px the header and main stay 980px wide and the cards stay three columns. Impact is serious. Priority is high. Not changed.
+The page does not reflow below 980px. Evidence: at 640px and 320px the header and main stay 980px wide and the cards stay three columns. Impact is serious. Priority is high. Not changed. Retest: not run.
+
+The button text and labels are in `index.html`. The outline rule removal is in `styles.css`.
+
+## One automated finding and one manual finding
+
+axe-core caught the empty submit button. Rule is button-name.
+
+Tab showed no focus ring. Focused controls computed to outline-style none and box-shadow none.
